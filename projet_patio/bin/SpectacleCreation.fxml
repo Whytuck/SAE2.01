@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lot7.SpectacleController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../../../../../Téléchargements/P-modified.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefWidth="400.0" style="-fx-background-color: #B3DDFF; -fx-background-radius: 10;" text="Création de Spectacle">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Nom du spectacle :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomSpectacleField" alignment="CENTER" prefHeight="25.0" prefWidth="231.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="155.0" prefWidth="550.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Description :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Durée (min) :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dureeField" prefHeight="25.0" prefWidth="79.0" />
+            <Label text="ex: 120">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Genre :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="genreChoiceBox" prefWidth="150.0" />
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Plein Tarif :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tarifPleinField" prefHeight="25.0" prefWidth="79.0" />
+            <Label text="ex: 50">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Tarif réduit :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tarifReduitField" prefHeight="25.0" prefWidth="79.0" />
+            <Label text="ex: 40">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="240.0" text="Tarif enfant :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tarifEnfantField" prefHeight="25.0" prefWidth="79.0" />
+            <Label text="ex: 25">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveSpectacle" text="Enregistrer" />
+            <Button fx:id="cancelButton" layoutX="265.0" layoutY="41.0" mnemonicParsing="false" onAction="#cancelSpectacle" text="Annuler" />
+         </children>
+      </HBox>
+      <Label fx:id="erreurLabel" text="Erreur" textFill="RED" visible="false" />
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lot7.CtrlAccueil">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Label text="Le Patio :">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label text="Spectacles :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableSpec" prefHeight="124.0" prefWidth="656.0">
+               <columns>
+                  <TableColumn prefWidth="103.0" text="Nom" />
+                  <TableColumn prefWidth="239.0" text="Description" />
+                  <TableColumn prefWidth="82.0" text="Duree" />
+                  <TableColumn prefWidth="128.0" text="Genre" />
+                  <TableColumn prefWidth="117.0" text="Tarif" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label text="Représentations :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableRep" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="147.0" text="Date" />
+                  <TableColumn prefWidth="141.0" text="Heure" />
+                  <TableColumn prefWidth="138.0" text="Annuler" />
+                  <TableColumn prefWidth="243.0" text="Spectacle" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="newSpec" mnemonicParsing="false" onAction="#newSpectacle" text="Nouveau Spectacle" />
+            <Button fx:id="newRepB" mnemonicParsing="false" onAction="#newRepres" text="Nouvelle Représentation" />
+            <Button fx:id="statsB" mnemonicParsing="false" onAction="#afficheStat" text="Statisiques" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
